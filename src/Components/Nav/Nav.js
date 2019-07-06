@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./../../images/dm_white_logo.png";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import "./Nav.css";
 
 class Nav extends Component {
@@ -9,10 +10,15 @@ class Nav extends Component {
         <div>
           <img src={logo} alt="dm logo" />
         </div>
-        <ul>
-          <li>Home</li>
-          <li>Topics</li>
-        </ul>
+        
+            <ul>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/topics'>Topics</Link>
+              </li>
+            </ul>
       </div>
     );
   }
